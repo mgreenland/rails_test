@@ -1,4 +1,6 @@
 Artquiz::Application.routes.draw do
+  resources :artworks
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:
