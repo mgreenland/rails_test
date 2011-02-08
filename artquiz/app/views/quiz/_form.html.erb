@@ -1,0 +1,22 @@
+<% form_tag({:action => @next_action, :id => @next_id}) do %>
+<div class="field">
+  <%= label_tag "title", "Title:" %>
+  <%= text_field_tag "title" %>
+</div>
+  <div class="field">
+    <%= label_tag "artist", "Artist:" %>
+    <%= text_field_tag 'artist' %>
+  </div>
+  <div class="field">
+    <%= label_tag "movement", "Movement:" %>
+    <%= text_field_tag 'movement' %>
+  </div>
+  <div class="field">
+    <%= label_tag "date", "Date:" %>
+    <%= text_field_tag 'date' %>
+  </div>
+  <%= hidden_field_tag "prev_id", @id %>
+  <div class="actions">
+    <%= submit_tag "That's my final answer" %>
+  </div>
+<% end %>

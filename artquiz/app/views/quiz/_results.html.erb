@@ -1,0 +1,18 @@
+<% unless params[:commit].nil? then %>
+<table>
+  <tr><th>You said:</th><th>Survey says:</th><th>Result: </th></tr>
+  <% [:title, :artist, :movement, :date].each do |attrib| %>
+    <tr>
+      <td><%= params[attrib] %></td>
+      <td><%= @prev_artwork.send attrib %></td>
+      <td>
+	<% if @prev_artwork.match_attrib(attrib, params[attrib]) then %>
+	<%= content_tag :span, "correct", :style => "color: green" %>
+	<% else %>
+	<%= content_tag :span, "NO WRONG", :style => "color: red" %>
+	<% end %>
+      </td>
+    </tr>
+    <% end %>
+</table>
+<% end %>

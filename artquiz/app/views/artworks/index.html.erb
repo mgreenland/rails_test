@@ -6,7 +6,7 @@
     <th>Artist</th>
     <th>Movement</th>
     <th>Date</th>
-    <th>Image url</th>
+    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +18,7 @@
     <td><%= artwork.artist %></td>
     <td><%= artwork.movement %></td>
     <td><%= artwork.date %></td>
-    <td><%= artwork.image_url %></td>
+    <td><img src="<%= artwork.image_url %>" width="100px"/></td>
     <td><%= link_to 'Show', artwork %></td>
     <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
     <td><%= link_to 'Destroy', artwork, :confirm => 'Are you sure?', :method => :delete %></td>

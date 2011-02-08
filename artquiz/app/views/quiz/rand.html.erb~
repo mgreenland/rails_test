@@ -1,0 +1,8 @@
+<h1> Okay, what's this? </h1>
+
+<script type="text/javascript">
+	document.write("<img src='<%= @artwork.image_url %>' width='" + screen.width / 2 + "px'/>");
+</script>
+
+<br />
+<%= link_to "Shit, I dunno", {:action => "rand"} %>

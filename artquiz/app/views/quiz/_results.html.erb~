@@ -1,0 +1,5 @@
+<%= unless params[:commit].nil? then %>
+<table>
+  <tr><th>You said:</th><th>Survey says:</th><th>Result: </th></tr>
+</table>
+<% end %>

@@ -2,6 +2,10 @@ Artquiz::Application.routes.draw do
   resources :artworks
 
   root :to => "home#index"
+  
+  match "quiz" => "quiz#index"
+  match "quiz/rand" => "quiz#rand"
+  match "quiz/:id" => "quiz#single"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
