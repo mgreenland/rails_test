@@ -7,7 +7,7 @@ class QuizController < ApplicationController
 
   def single
     @id = params[:id]
-    @artwork = Artwork.find(@id)
+    @artwork = Artwork.find(@id) if @id.to_i <= Artwork.count
     @next_id = params[:id].to_i.next.to_s
     @next_action = "single"
     @prev_id = params[:prev_id]
